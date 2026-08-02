@@ -26,7 +26,7 @@ let code = fs.readFileSync(source, 'utf8');
 
 debug += code + "\n"
 
-code = code.replace(/diga\((.*?)\)/g, function(match, conteudo){
+code = code.replace(/diga\(\s*(.*?)\)/g, function(match, conteudo){
   std = true
   return 'println!(' + conteudo + ')';
 });
