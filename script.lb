@@ -1,0 +1,2 @@
+let temp = pergunte("olá")
+print!("{:?}", temp);
