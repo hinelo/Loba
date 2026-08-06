@@ -1,0 +1,23 @@
+macro_rules! diga {
+    () => {
+        println!();
+    };
+
+    (? $head:expr, $($tail:tt)*) => {
+        print!("{:?} ", $head);    
+        python_print!($($tail)*);  
+    };
+
+    (? $head:expr) => {
+        println!("{:?}", $head);
+    };
+
+    ($head:expr, $($tail:tt)*) => {
+        print!("{} ", $head);      
+        python_print!($($tail)*);  
+    };
+
+    ($head:expr) => {
+        println!("{}", $head);
+    };
+}

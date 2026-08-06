@@ -1,0 +1,3 @@
+#!/bin/bash
+
+loba loba_testing.lb && ./loba_testing script.lb && rustc script.rs

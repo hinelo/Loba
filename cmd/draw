@@ -1,0 +1,15 @@
+fn draw<const L: usize, const C: usize>(matrix: &[[u8; C]; L]) {
+    for double in matrix.chunks(2) {
+        if double.len() == 2 {
+            for (top, bot) in double[0].iter().zip(double[1].iter()) {
+                 print!("\x1b[38;5;{}m\x1b[48;5;{}m▀", top, bot);
+            }
+            print!("\x1b[0m\n");
+        } else {
+            for top in double[0].iter() {
+                 print!("\x1b[38;5;{}m▀", top);
+            }
+            print!("\x1b[0m\n");
+        }   
+    }
+}
