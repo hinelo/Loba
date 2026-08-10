@@ -1,8 +1,0 @@
-função Teste(texto: &str) -> RetType {
-    let mut state = [[0u8; 16];16];
-    draw(&state);
-    diga!(texto);
-}
-let response = pergunte("oi")
-diga!("irei rodar uma função!");
-Teste(response);

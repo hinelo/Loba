@@ -5,7 +5,7 @@ macro_rules! diga {
 
     (? $head:expr, $($tail:tt)*) => {
         print!("{:?} ", $head);    
-        python_print!($($tail)*);  
+        diga!($($tail)*);  
     };
 
     (? $head:expr) => {
@@ -14,10 +14,10 @@ macro_rules! diga {
 
     ($head:expr, $($tail:tt)*) => {
         print!("{} ", $head);      
-        python_print!($($tail)*);  
+        diga!($($tail)*);  
     };
 
     ($head:expr) => {
-        println!("{}", $head);
+        println!("{}", $head)
     };
 }
