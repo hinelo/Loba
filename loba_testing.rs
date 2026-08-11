@@ -81,7 +81,9 @@ let data = fs::read_to_string(cwd.join(&file_name)).unwrap_or_else(|erro| {
         "Arquivo não encontrado em: {:?}\nMotivo: {}\n", 
         cwd.join(&file_name), erro
     );
-});
+})
+.trim()
+.replace("função", "fn");
 
 if data.trim().contains("main(") {
 	use_main = false
